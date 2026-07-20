@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leeway Rides | Medical & Senior Transportation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-purple: #1b022b; --secondary-purple: #2a0845; --accent-gold: #f3ad21; --light-gold: #ffcf68; --gold-gradient: linear-gradient(135deg, #f3ad21 0%, #ffcf68 50%, #c48206 100%); --text-light: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--primary-purple); color: var(--text-light); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        .top-bar { background: #11011c; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; border-bottom: 1px solid rgba(243, 173, 33, 0.3); }
+        .top-bar a { color: var(--accent-gold); text-decoration: none; font-weight: 600; }
+        header { background: rgba(27, 2, 43, 0.95); padding: 15px 5%; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .logo-img { height: 40px; width: auto; }
+        nav ul { display: flex; list-style: none; gap: 20px; align-items: center; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: var(--accent-gold); }
+        .btn-gold { background: var(--gold-gradient); color: var(--primary-purple); padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; border: none; cursor: pointer; display: inline-block; }
+        .content-section { padding: 60px 5%; max-width: 900px; margin: auto; }
+        .content-section h1 { font-size: 2.3rem; color: var(--accent-gold); margin-bottom: 20px; text-transform: uppercase; text-align: center; }
+        .content-section p { margin-bottom: 20px; color: #ddd; }
+        .disclaimer-box { background: rgba(243, 173, 33, 0.1); border-left: 4px solid var(--accent-gold); padding: 15px 20px; margin: 25px 0; font-size: 0.95rem; color: #ffcf68; }
+        ul.styled-list { margin: 20px 0 30px 20px; color: #ddd; }
+        ul.styled-list li { margin-bottom: 10px; }
+        .lead-form-box { background: var(--secondary-purple); border: 2px solid var(--accent-gold); padding: 40px; border-radius: 15px; margin-top: 40px; }
+        .lead-form-box h3 { color: var(--light-gold); margin-bottom: 20px; text-align: center; font-size: 1.5rem; text-transform: uppercase; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full-width { grid-column: span 2; }
+        .form-group label { margin-bottom: 6px; font-size: 0.9rem; font-weight: 600; color: var(--light-gold); }
+        .form-group input, .form-group select, .form-group textarea { padding: 12px; border-radius: 6px; border: 1px solid rgba(243, 173, 33, 0.4); background: rgba(0, 0, 0, 0.3); color: #fff; font-size: 0.95rem; }
+        footer { background: #09000f; padding: 40px 5% 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; margin-top: 50px; }
+        .copyright { font-size: 0.8rem; color: #777; }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .form-grid { grid-template-columns: 1fr; } .form-group.full-width { grid-column: span 1; } }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div><i class="fa-solid fa-location-dot"></i> Non-Emergency Medical & Senior Transportation</div>
+        <div>Call/Text: <a href="sms:+19803923216">980-392-3216</a></div>
+    </div>
+    <header>
+        <a href="index.html">
+            <img src="7689.png" alt="Leeway Rides Logo" class="logo-img">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="airport.html">Airport</a></li>
+                <li><a href="medical.html">Medical</a></li>
+                <li><a href="local.html">Local</a></li>
+                <li><a href="areas.html">Service Areas</a></li>
+                <li><a href="partners.html">Partnerships</a></li>
+                <li><a href="contact.html">Contact & Book</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html" class="btn-gold">Request Ride</a>
+    </header>
+    <main class="content-section">
+        <h1>Medical & Senior Transportation</h1>
+        <p>Leeway Rides provides professional, reliable, non-emergency transportation for ambulatory passengers who do not require emergency medical care or specialized medical equipment during transport.</p>
+        
+        <div class="disclaimer-box">
+            <strong>Important Medical Disclaimer:</strong> Leeway Rides provides non-emergency transportation and is not an ambulance service. If a passenger is experiencing a medical emergency, please call 911 immediately.
+        </div>
+
+        <h3 style="color: var(--light-gold); margin-top: 30px; margin-bottom: 10px;">Services May Include Transportation To & From:</h3>
+        <ul class="styled-list">
+            <li>Primary-care and follow-up appointments</li>
+            <li>Oncology and dialysis treatments</li>
+            <li>Physical therapy and rehabilitation facilities</li>
+            <li>Dental appointments and outpatient procedures</li>
+            <li>Pharmacies, hospitals, and medical centers</li>
+            <li>Senior centers, assisted-living communities, and adult day programs</li>
+            <li>Behavioral-health appointments and routine wellness visits</li>
+            <li>Family visits and personal errands</li>
+        </ul>
+
+        <h3 style="color: var(--light-gold); margin-top: 30px; margin-bottom: 10px;">Program Highlights:</h3>
+        <ul class="styled-list">
+            <li>One-way and round-trip recurring appointment transportation</li>
+            <li>Scheduled pickup and return trips designed for seniors and ambulatory passengers</li>
+            <li>Seamless coordination with family members, caregivers, facilities, case managers, and authorized representatives</li>
+            <li>Advance scheduling and courtesy communication regarding pickup details</li>
+            <li>Door-to-door transportation when appropriate and safely available</li>
+            <li>Long-distance medical transportation available by customized quote</li>
+        </ul>
+
+        <div class="lead-form-box">
+            <h3>Medical & Senior Transportation Request Form</h3>
+            <form action="mailto:Leewayridesnow@gmail.com" method="post" enctype="text/plain" class="form-grid">
+                <input type="hidden" name="Source" value="Medical Page Request">
+                <div class="form-group">
+                    <label>Member or Passenger Name *</label>
+                    <input type="text" name="PassengerName" required placeholder="Passenger Full Name">
+                </div>
+                <div class="form-group">
+                    <label>Passenger Phone Number *</label>
+                    <input type="tel" name="Phone" required placeholder="980-392-3216">
+                </div>
+                <div class="form-group">
+                    <label>Authorized Contact / Caregiver Name</label>
+                    <input type="text" name="CaregiverName" placeholder="If applicable">
+                </div>
+                <div class="form-group">
+                    <label>Preferred Contact Method</label>
+                    <select name="ContactMethod">
+                        <option value="Phone Call">Phone Call</option>
+                        <option value="Text Message">Text Message</option>
+                        <option value="Email">Email</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Pickup Address *</label>
+                    <input type="text" name="Pickup" required placeholder="Home or Facility Address">
+                </div>
+                <div class="form-group">
+                    <label>Facility Name *</label>
+                    <input type="text" name="FacilityName" required placeholder="Hospital, Clinic, or Center Name">
+                </div>
+                <div class="form-group full-width">
+                    <label>Facility Address & Phone Number</label>
+                    <input type="text" name="FacilityContact" placeholder="Full address and phone of medical facility">
+                </div>
+                <div class="form-group">
+                    <label>Appointment Type</label>
+                    <input type="text" name="AppointmentType" placeholder="Dialysis, Physical Therapy, Doctor Visit...">
+                </div>
+                <div class="form-group">
+                    <label>Appointment Date & Time *</label>
+                    <input type="text" name="AppointmentDateTime" required placeholder="Date and Appointment Time">
+                </div>
+                <div class="form-group">
+                    <label>Requested Pickup Time *</label>
+                    <input type="text" name="RequestedPickupTime" required placeholder="Time to pick up passenger">
+                </div>
+                <div class="form-group">
+                    <label>Estimated Appointment Completion Time</label>
+                    <input type="text" name="CompletionTime" placeholder="Approximate finish time">
+                </div>
+                <div class="form-group">
+                    <label>Trip Type</label>
+                    <select name="TripType">
+                        <option value="One-Way">One-Way</option>
+                        <option value="Round-Trip">Round-Trip</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ambulatory Status</label>
+                    <select name="AmbulatoryStatus">
+                        <option value="Ambulatory">Ambulatory (Walks independently / with cane)</option>
+                        <option value="Other">Requires standard assistance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Number of Additional Passengers / Escorts</label>
+                    <input type="number" name="Escorts" value="0" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Recurring Schedule Needed?</label>
+                    <select name="Recurring">
+                        <option value="One-Time">One-Time Trip</option>
+                        <option value="Weekly Recurring">Weekly Recurring Schedule</option>
+                        <option value="Multiple Times Weekly">Multiple Times Weekly</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label>Special Instructions & Details</label>
+                    <textarea name="Notes" rows="3" placeholder="Special accommodation notes (Avoid medical diagnostic details)..."></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <button type="submit" class="btn-gold" style="width: 100%; padding: 14px;">Submit Medical Transportation Request</button>
+                    <p style="font-size: 0.75rem; color: #aaa; text-align: center; margin-top: 10px;">Submitting this request does not guarantee a booking until a Leeway Rides representative contacts you with confirmation.</p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="copyright">&copy; 2026 Leeway Rides / LTS Connect Network. All Rights Reserved.</div>
+    </footer>
+</body>
+</html>
