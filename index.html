@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leeway Rides | Home - Safe. Reliable. Connected.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-purple: #1b022b; --secondary-purple: #2a0845; --accent-gold: #f3ad21; --light-gold: #ffcf68; --gold-gradient: linear-gradient(135deg, #f3ad21 0%, #ffcf68 50%, #c48206 100%); --text-light: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--primary-purple); color: var(--text-light); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        .top-bar { background: #11011c; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; border-bottom: 1px solid rgba(243, 173, 33, 0.3); }
+        .top-bar a { color: var(--accent-gold); text-decoration: none; font-weight: 600; }
+        header { background: rgba(27, 2, 43, 0.95); padding: 15px 5%; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .logo-img { height: 50px; width: auto; }
+        nav ul { display: flex; list-style: none; gap: 20px; align-items: center; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: var(--accent-gold); }
+        .btn-gold { background: var(--gold-gradient); color: var(--primary-purple); padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; border: none; cursor: pointer; display: inline-block; }
+        .hero { padding: 60px 5%; background: radial-gradient(circle at center, var(--secondary-purple) 0%, var(--primary-purple) 100%); display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; min-height: 75vh; }
+        .hero-content h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 15px; text-transform: uppercase; }
+        .hero-subtitle { font-size: 1.1rem; color: var(--accent-gold); letter-spacing: 2px; margin-bottom: 15px; font-weight: 700; text-transform: uppercase; }
+        .hero-content p { color: #ddd; margin-bottom: 25px; font-size: 1.05rem; }
+        .hero-ctas { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        .phone-cta { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; border: 2px solid var(--accent-gold); padding: 8px 18px; border-radius: 30px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-card { background: var(--secondary-purple); border: 1px solid rgba(243, 173, 33, 0.3); border-radius: 12px; padding: 30px 20px; text-decoration: none; color: inherit; display: block; transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
+        .service-card i { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; }
+        .content-section { padding: 70px 5%; max-width: 1000px; margin: auto; }
+        .content-section h2 { font-size: 2.2rem; color: var(--accent-gold); margin-bottom: 20px; text-align: center; text-transform: uppercase; }
+        .content-section p { margin-bottom: 20px; font-size: 1rem; color: #ddd; }
+        footer { background: #09000f; padding: 40px 5% 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
+        .copyright { font-size: 0.8rem; color: #777; margin-top: 15px; }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .hero { grid-template-columns: 1fr; text-align: center; } .hero-ctas { justify-content: center; } }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div><i class="fa-solid fa-location-dot"></i> Serving Shelby, Cleveland County & Surrounding Areas</div>
+        <div>Call/Text: <a href="sms:+19803923216">980-392-3216</a></div>
+    </div>
+    <header>
+        <a href="index.html">
+            <img src="7689.png" alt="Leeway Rides Logo" class="logo-img">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="airport.html">Airport</a></li>
+                <li><a href="medical.html">Medical</a></li>
+                <li><a href="local.html">Local</a></li>
+                <li><a href="areas.html">Service Areas</a></li>
+                <li><a href="contact.html">Contact & Book</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html" class="btn-gold">Request a Ride</a>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">Safe. Reliable. Connected.</div>
+            <h1>LEEWAY <span>RIDES</span></h1>
+            <p>One Vision. One Mission. One Family. Providing dependable private transportation for individuals, families, seniors, medical patients, airport travelers, and regional commuters[cite: 1].</p>
+            <div class="hero-ctas">
+                <a href="contact.html" class="btn-gold">Schedule Transportation</a>
+                <a href="tel:9803923216" class="phone-cta"><i class="fa-solid fa-phone"></i> 980-392-3216</a>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <img src="7689.png" alt="Leeway Rides Logo Emblem" style="max-width: 80%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));">
+        </div>
+    </section>
+    <section class="content-section">
+        <h2>Why Choose Leeway Rides</h2>
+        <p>Leeway Rides was created to provide dependable transportation with a personal touch. We understand that every trip matters—whether a passenger is traveling to a medical appointment, catching a flight, reporting to work, visiting family, or traveling out of town. Our goal is to provide professional communication, respectful service, and reliable transportation that gives clients and families greater peace of mind.</p>
+        
+        <h2 style="margin-top: 60px;">Our Services</h2>
+        <div class="services-grid">
+            <a href="airport.html" class="service-card">
+                <i class="fa-solid fa-plane-departure"></i>
+                <h3>Airport Transfers</h3>
+                <p>Scheduled airport transportation for CLT, GSP, and regional travel.</p>
+            </a>
+            <a href="medical.html" class="service-card">
+                <i class="fa-solid fa-notes-medical"></i>
+                <h3>Medical & Senior Care</h3>
+                <p>Non-emergency medical and senior ambulatory transportation[cite: 1].</p>
+            </a>
+            <a href="local.html" class="service-card">
+                <i class="fa-solid fa-location-arrow"></i>
+                <h3>Local & Out-of-Town</h3>
+                <p>Prearranged city trips, errands, and long-distance transfers.</p>
+            </a>
+            <a href="contact.html" class="service-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Partnerships</h3>
+                <p>Custom transit arrangements for facilities, organizations, and employers.</p>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">&copy; 2026 Leeway Rides / LTS Connect Network. All Rights Reserved. Available by advance reservation.</div>
+    </footer>
+</body>
+</html>
