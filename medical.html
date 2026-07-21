@@ -51,7 +51,7 @@
     </div>
     <header>
         <a href="index.html">
-            <img src="7689.png" alt="Leeway Rides Logo - Private Transportation Shelby NC" class="logo-img">
+            <img src="7689.png" alt="Leeway Rides Logo - Private Transportation Shelby NC" class="logo-img" width="120" height="40">
         </a>
         <nav>
             <ul>
@@ -102,82 +102,82 @@
                 <input type="hidden" name="Source" value="Medical Page Request">
                 
                 <div class="form-group">
-                    <label>Member or Passenger Name *</label>
-                    <input type="text" name="PassengerName" required placeholder="Passenger Full Name">
+                    <label for="passenger-name-input">Member or Passenger Name *</label>
+                    <input type="text" id="passenger-name-input" name="PassengerName" required placeholder="Passenger Full Name">
                 </div>
                 <div class="form-group">
-                    <label>Passenger Phone Number *</label>
-                    <input type="tel" name="Phone" required placeholder="980-392-3216">
+                    <label for="medical-phone-input">Passenger Phone Number *</label>
+                    <input type="tel" id="medical-phone-input" name="Phone" required placeholder="980-392-3216">
                 </div>
                 <div class="form-group">
-                    <label>Authorized Contact / Caregiver Name</label>
-                    <input type="text" name="CaregiverName" placeholder="If applicable">
+                    <label for="caregiver-name-input">Authorized Contact / Caregiver Name</label>
+                    <input type="text" id="caregiver-name-input" name="CaregiverName" placeholder="If applicable">
                 </div>
                 <div class="form-group">
-                    <label>Preferred Contact Method</label>
-                    <select name="ContactMethod">
+                    <label for="medical-contact-method">Preferred Contact Method</label>
+                    <select id="medical-contact-method" name="ContactMethod">
                         <option value="Phone Call">Phone Call</option>
                         <option value="Text Message">Text Message</option>
                         <option value="Email">Email</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Pickup Address *</label>
-                    <input type="text" name="Pickup" required placeholder="Home or Facility Address">
+                    <label for="medical-pickup-input">Pickup Address *</label>
+                    <input type="text" id="medical-pickup-input" name="Pickup" required placeholder="Home or Facility Address">
                 </div>
                 <div class="form-group">
-                    <label>Facility Name *</label>
-                    <input type="text" name="FacilityName" required placeholder="Hospital, Clinic, or Center Name">
+                    <label for="facility-name-input">Facility Name *</label>
+                    <input type="text" id="facility-name-input" name="FacilityName" required placeholder="Hospital, Clinic, or Center Name">
                 </div>
                 <div class="form-group full-width">
-                    <label>Facility Address & Phone Number</label>
-                    <input type="text" name="FacilityContact" placeholder="Full address and phone of medical facility">
+                    <label for="facility-contact-input">Facility Address & Phone Number</label>
+                    <input type="text" id="facility-contact-input" name="FacilityContact" placeholder="Full address and phone of medical facility">
                 </div>
                 <div class="form-group">
-                    <label>Appointment Type</label>
-                    <input type="text" name="AppointmentType" placeholder="Dialysis, Physical Therapy, Doctor Visit...">
+                    <label for="appointment-type-input">Appointment Type</label>
+                    <input type="text" id="appointment-type-input" name="AppointmentType" placeholder="Dialysis, Physical Therapy, Doctor Visit...">
                 </div>
                 <div class="form-group">
-                    <label>Appointment Date & Time *</label>
-                    <input type="text" name="AppointmentDateTime" required placeholder="Date and Appointment Time">
+                    <label for="appointment-datetime-input">Appointment Date & Time *</label>
+                    <input type="text" id="appointment-datetime-input" name="AppointmentDateTime" required placeholder="Date and Appointment Time">
                 </div>
                 <div class="form-group">
-                    <label>Requested Pickup Time *</label>
-                    <input type="text" name="RequestedPickupTime" required placeholder="Time to pick up passenger">
+                    <label for="requested-pickup-time">Requested Pickup Time *</label>
+                    <input type="text" id="requested-pickup-time" name="RequestedPickupTime" required placeholder="Time to pick up passenger">
                 </div>
                 <div class="form-group">
-                    <label>Estimated Appointment Completion Time</label>
-                    <input type="text" name="CompletionTime" placeholder="Approximate finish time">
+                    <label for="completion-time-input">Estimated Appointment Completion Time</label>
+                    <input type="text" id="completion-time-input" name="CompletionTime" placeholder="Approximate finish time">
                 </div>
                 <div class="form-group">
-                    <label>Trip Type</label>
-                    <select name="TripType">
+                    <label for="medical-trip-type">Trip Type</label>
+                    <select id="medical-trip-type" name="TripType">
                         <option value="One-Way">One-Way</option>
                         <option value="Round-Trip">Round-Trip</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Ambulatory Status</label>
-                    <select name="AmbulatoryStatus">
+                    <label for="ambulatory-status">Ambulatory Status</label>
+                    <select id="ambulatory-status" name="AmbulatoryStatus">
                         <option value="Ambulatory">Ambulatory (Walks independently / with cane)</option>
                         <option value="Other">Requires standard assistance</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Number of Additional Passengers / Escorts</label>
-                    <input type="number" name="Escorts" value="0" min="0">
+                    <label for="escorts-input">Number of Additional Passengers / Escorts</label>
+                    <input type="number" id="escorts-input" name="Escorts" value="0" min="0">
                 </div>
                 <div class="form-group">
-                    <label>Recurring Schedule Needed?</label>
-                    <select name="Recurring">
+                    <label for="recurring-select">Recurring Schedule Needed?</label>
+                    <select id="recurring-select" name="Recurring">
                         <option value="One-Time">One-Time Trip</option>
                         <option value="Weekly Recurring">Weekly Recurring Schedule</option>
                         <option value="Multiple Times Weekly">Multiple Times Weekly</option>
                     </select>
                 </div>
                 <div class="form-group full-width">
-                    <label>Special Instructions & Details</label>
-                    <textarea name="Notes" rows="3" placeholder="Special accommodation notes (Avoid medical diagnostic details)..."></textarea>
+                    <label for="medical-notes">Special Instructions & Details</label>
+                    <textarea id="medical-notes" name="Notes" rows="3" placeholder="Special accommodation notes (Avoid medical diagnostic details)..."></textarea>
                 </div>
                 <div class="form-group full-width">
                     <button type="submit" class="btn-gold" style="width: 100%; padding: 14px;">Submit Medical Transportation Request</button>
