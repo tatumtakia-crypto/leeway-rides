@@ -107,12 +107,13 @@
             </a>
         </div>
 
-        <!-- Shorter Version Quote Form Added to Home Page -->
+        <!-- Quick Quote Form Powered by Web3Forms -->
         <div class="quote-box">
             <h3>Quick Quote Request</h3>
             <p style="text-align: center; color: #ccc; font-size: 0.95rem; margin-bottom: 10px;">Need a fast estimate? Fill out the short form below and our team will get back to you promptly.</p>
             
-            <form action="mailto:Leewayridesnow@gmail.com" method="post" enctype="text/plain" class="form-grid">
+            <form action="https://api.web3forms.com/submit" method="POST" class="form-grid" id="quick-quote-form">
+                <input type="hidden" name="access_key" value="a5f6de0a-7809-4119-b0e9-62eb6bcd4c28">
                 <input type="hidden" name="Source" value="Quick Quote Form on Home Page">
                 
                 <div class="form-group">
@@ -156,6 +157,7 @@
                 
                 <div class="form-group full-width">
                     <button type="submit" class="btn-gold" style="width: 100%; padding: 14px;">Get Fast Quote</button>
+                    <div id="quote-form-result" style="margin-top: 10px; text-align: center; font-size: 0.9rem;"></div>
                 </div>
             </form>
         </div>
@@ -163,5 +165,38 @@
     <footer>
         <div class="copyright">&copy; 2026 Leeway Rides / LTS Connect Network. All Rights Reserved. Available by advance reservation.</div>
     </footer>
+
+    <!-- Web3Forms Submission Script for Quick Quote -->
+    <script>
+        const quoteForm = document.getElementById('quick-quote-form');
+        const quoteResult = document.getElementById('quote-form-result');
+
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(quoteForm);
+            quoteResult.style.color = "var(--light-gold)";
+            quoteResult.textContent = "Sending your quote request...";
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    quoteResult.style.color = "#4ade80";
+                    quoteResult.textContent = "Thank you! Your quote request has been sent successfully.";
+                    quoteForm.reset();
+                } else {
+                    quoteResult.style.color = "#f87171";
+                    quoteResult.textContent = json.message || "Something went wrong. Please try again.";
+                }
+            })
+            .catch(error => {
+                quoteResult.style.color = "#f87171";
+                quoteResult.textContent = "Network error! Please check your connection.";
+            });
+        });
+    </script>
 </body>
 </html>
