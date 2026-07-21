@@ -74,7 +74,8 @@
             <h3>Schedule Your Ride</h3>
             <p style="color: #ccc; font-size: 0.9rem; text-align: center; margin-bottom: 20px;">Fill out your trip details below to submit your reservation directly to our team.</p>
             
-            <form action="mailto:Leewayridesnow@gmail.com" method="post" enctype="text/plain" class="form-grid">
+            <form class="form-grid">
+                <input type="hidden" name="access_key" value="a5f6de0a-7809-4119-b0e9-62eb6bcd4c28">
                 <input type="hidden" name="Source" value="Direct Booking Form on Contact Page">
                 
                 <div class="form-group">
@@ -199,8 +200,10 @@
             </ul>
             <p style="color: var(--light-gold); font-weight: 600; margin-bottom: 20px;">Need dependable transportation for your clients, patients, residents, or employees? Complete the inquiry form below:</p>
 
-            <form action="mailto:Leewayridesnow@gmail.com" method="post" enctype="text/plain" class="form-grid">
+            <form class="form-grid">
+                <input type="hidden" name="access_key" value="a5f6de0a-7809-4119-b0e9-62eb6bcd4c28">
                 <input type="hidden" name="Source" value="Partnership Page Inquiry on Contact Page">
+                
                 <div class="form-group">
                     <label>Organization Name *</label>
                     <input type="text" name="OrgName" required placeholder="Organization Name">
@@ -318,5 +321,43 @@
     <footer>
         <div class="copyright">&copy; 2026 Leeway Rides / LTS Connect Network. All Rights Reserved.</div>
     </footer>
+
+    <!-- Cal.com Modal & Email Submit Integration Script -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let g = C.Cal = C.Cal || function () { let cal = g; let arg = arguments; if (!cal.q) { cal.q = []; } if (arg[0] === 'init') { cal.q.push(arg); return; } if (arg[0] === 'api') { p(cal, arg); return; } cal.q.push(arg); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      
+      Cal("init", {origin:"https://cal.com"});
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const forms = document.querySelectorAll('.form-grid');
+        forms.forEach(form => {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            // 1. Post form values to Web3Forms to send email notification
+            const formData = new FormData(form);
+            fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: formData
+            });
+
+            // 2. Retrieve Name & Email inputs for Cal.com prefill
+            const nameInput = form.querySelector('input[name="CustomerName"]') || 
+                              form.querySelector('input[name="ContactPerson"]') || 
+                              form.querySelector('input[name="Name"]');
+            const emailInput = form.querySelector('input[name="Email"]');
+            
+            // 3. Trigger Cal.com popup modal
+            Cal("modal", {
+              calLink: "your-username/ride-request", // REPLACE WITH YOUR EXACT CAL LINK
+              config: {
+                name: nameInput ? nameInput.value : '',
+                email: emailInput ? emailInput.value : ''
+              }
+            });
+          });
+        });
+      });
+    </script>
 </body>
 </html>
