@@ -20,7 +20,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background-color: var(--primary-purple); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
-        .top-bar { background: #11011c; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; border-bottom: 1px solid rgba(243, 173, 33, 0.3); }
+        .top-bar { background: #11011c; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; border-bottom: 1px solid rgba(243, 173, 33, 0.3); flex-wrap: wrap; gap: 10px; }
+        .top-bar-links { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
         .top-bar a { color: var(--accent-gold); text-decoration: none; font-weight: 600; }
         header { background: rgba(27, 2, 43, 0.95); padding: 15px 5%; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
         .logo-img { height: 50px; width: auto; }
@@ -34,6 +35,8 @@
         .hero-content p { color: #ddd; margin-bottom: 25px; font-size: 1.05rem; }
         .hero-ctas { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
         .phone-cta { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; border: 2px solid var(--accent-gold); padding: 8px 18px; border-radius: 30px; }
+        .whatsapp-cta { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem; border: 2px solid #25d366; background: rgba(37, 211, 102, 0.1); padding: 8px 18px; border-radius: 30px; }
+        .whatsapp-cta:hover { background: rgba(37, 211, 102, 0.2); }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 40px; width: 100%; }
         .service-card { background: var(--secondary-purple); border: 1px solid rgba(243, 173, 33, 0.3); border-radius: 12px; padding: 30px 20px; text-decoration: none; color: inherit; display: block; transition: 0.3s; box-sizing: border-box; }
         .service-card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
@@ -95,11 +98,15 @@
 <body>
     <div class="top-bar">
         <div><i class="fa-solid fa-location-dot"></i> Serving Shelby, Cleveland County & Surrounding Areas</div>
-        <div>Call/Text: <a href="sms:+19803923216">980-392-3216</a></div>
+        <div class="top-bar-links">
+            <span>Call/Text: <a href="sms:+19803923216">980-392-3216</a></span>
+            <span>|</span>
+            <a href="https://wa.me/19803923216" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp</a>
+        </div>
     </div>
     <header>
         <a href="index.html">
-            <img src="7689.png" alt="Leeway Rides Logo - Private Transportation Shelby NC" class="logo-img">
+            <img src="7689.png" alt="Leeway Rides Logo - Private Transportation Shelby NC" class="logo-img" width="150" height="50">
         </a>
         <nav>
             <ul>
@@ -120,11 +127,12 @@
             <p>One Vision. One Mission. One Family. Providing dependable private transportation for individuals, families, seniors, medical patients, airport travelers, and regional commuters.</p>
             <div class="hero-ctas">
                 <a href="contact.html" class="btn-gold">Schedule Transportation</a>
-                <a href="tel:9803923216" class="phone-cta"><i class="fa-solid fa-phone"></i> 980-392-3216</a>
+                <a href="tel:9803923216" class="phone-cta"><i class="fa-solid fa-phone"></i> Call</a>
+                <a href="https://wa.me/19803923216" target="_blank" class="whatsapp-cta"><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp</a>
             </div>
         </div>
         <div style="text-align: center;">
-            <img src="7689.png" alt="Leeway Rides Logo Emblem" style="max-width: 80%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));">
+            <img src="7689.png" alt="Leeway Rides Logo Emblem" width="300" height="300" style="max-width: 80%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));">
         </div>
     </section>
     <section class="content-section">
@@ -165,28 +173,28 @@
                 <input type="hidden" name="Source" value="Quick Quote Form on Home Page">
                 
                 <div class="form-group">
-                    <label>Your Name *</label>
-                    <input type="text" name="CustomerName" required placeholder="Full Name">
+                    <label for="customer-name-input">Your Name *</label>
+                    <input type="text" id="customer-name-input" name="CustomerName" required placeholder="Full Name">
                 </div>
                 
                 <div class="form-group">
-                    <label>Phone Number *</label>
-                    <input type="tel" name="Phone" required placeholder="980-392-3216">
+                    <label for="phone-input">Phone Number *</label>
+                    <input type="tel" id="phone-input" name="Phone" required placeholder="980-392-3216">
                 </div>
                 
                 <div class="form-group">
-                    <label>Pickup City / Location *</label>
-                    <input type="text" name="PickupLocation" required placeholder="City or Address">
+                    <label for="pickup-location-input">Pickup City / Location *</label>
+                    <input type="text" id="pickup-location-input" name="PickupLocation" required placeholder="City or Address">
                 </div>
                 
                 <div class="form-group">
-                    <label>Destination City / Location *</label>
-                    <input type="text" name="DestinationLocation" required placeholder="City or Address">
+                    <label for="destination-location-input">Destination City / Location *</label>
+                    <input type="text" id="destination-location-input" name="DestinationLocation" required placeholder="City or Address">
                 </div>
                 
                 <div class="form-group">
-                    <label>Service Type *</label>
-                    <select name="ServiceNeeded" required>
+                    <label for="service-needed-select">Service Type *</label>
+                    <select id="service-needed-select" name="ServiceNeeded" required>
                         <option value="Airport Transfer">Airport Transfer</option>
                         <option value="Medical / Senior Care">Medical / Senior Care</option>
                         <option value="Local / Out-of-Town">Local / Out-of-Town</option>
@@ -194,13 +202,13 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>Estimated Date</label>
-                    <input type="date" name="TripDate">
+                    <label for="trip-date-input">Estimated Date</label>
+                    <input type="date" id="trip-date-input" name="TripDate">
                 </div>
                 
                 <div class="form-group full-width">
-                    <label>Brief Trip Details / Questions</label>
-                    <textarea name="TripDetails" rows="2" placeholder="One-way or round trip, passenger count, special notes..."></textarea>
+                    <label for="trip-details-textarea">Brief Trip Details / Questions</label>
+                    <textarea id="trip-details-textarea" name="TripDetails" rows="2" placeholder="One-way or round trip, passenger count, special notes..."></textarea>
                 </div>
                 
                 <div class="form-group full-width">
